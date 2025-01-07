@@ -82,7 +82,7 @@ export function farcasterFrame() {
       }
       const provider = await this.getProvider()
       const accounts = await provider.request({
-        method: 'eth_requestAccounts',
+        method: 'eth_accounts',
       })
       return accounts.map((x) => getAddress(x))
     },
@@ -92,12 +92,12 @@ export function farcasterFrame() {
       return fromHex(hexChainId, 'number')
     },
     async isAuthorized() {
-      if (!connected) {
+      try {
+        const accounts = await this.getAccounts()
+        return !!accounts.length
+      } catch {
         return false
       }
-
-      const accounts = await this.getAccounts()
-      return !!accounts.length
     },
     async switchChain({ chainId }) {
       const provider = await this.getProvider()
