@@ -1,5 +1,11 @@
 # @farcaster/frame-core
 
+## 0.0.35
+
+### Patch Changes
+
+- [#214](https://github.com/farcasterxyz/miniapps/pull/214) [`4eb96df`](https://github.com/farcasterxyz/miniapps/commit/4eb96dfaf14e2d203e51ec32562253dcf7918fb8) Thanks [@deodad](https://github.com/deodad)! - no change - test release process
+
 ## 0.0.34
 
 ### Patch Changes
